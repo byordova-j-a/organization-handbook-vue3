@@ -7,6 +7,7 @@
     :value="modelValue"
     @input="updateInputValue"
     @blur="setValidationDisplay"
+    :maxlength="maxLength"
   />
 </template>
 
@@ -34,7 +35,11 @@ const {
 
 const inputWasInteracted = ref(false);
 
-const inputType = computed(() => (type === EInputType.PHONE ? EInputType.TEXT : type));
+const inputType = computed(() =>
+  type === EInputType.PHONE || EInputType.NUMBER ? EInputType.TEXT : type
+);
+
+const maxLength = computed(() => (type === EInputType.NUMBER ? 4 : 255));
 
 const setModelValue = (value: string) => {
   modelValue.value = value;
@@ -90,6 +95,7 @@ watch(
   line-height: 36px;
   border: 1px solid black;
   padding: 4px 10px;
+  box-sizing: border-box;
 }
 .input_invalid {
   border: 1px solid red;

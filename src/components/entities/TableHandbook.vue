@@ -58,7 +58,7 @@ const headerConfig = [
     value: EOrganizationKeys.ORGANIZATION,
   },
   {
-    title: 'Фио директора',
+    title: 'ФИО директора',
     vBind: { class: 'header-cell_director' },
     value: EOrganizationKeys.DIRECTOR,
   },
@@ -95,6 +95,12 @@ const headerCellClick = (type: string) => {
   font-size: 24px;
   user-select: none;
   cursor: default;
+  background-color: rgb(183, 183, 224);
+}
+
+.header-cell:nth-child(1),
+.header-cell:nth-child(2) {
+  cursor: pointer;
 }
 
 .header_sort_organization .header-cell_organization::after,

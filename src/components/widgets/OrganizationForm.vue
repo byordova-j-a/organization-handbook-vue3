@@ -24,7 +24,7 @@
       </div>
       <div class="organization-form__buttons">
         <Button text="Отмена" :color="EColor.RED" @click="close"></Button>
-        <Button text="Подтвердить" @click="confirm" :disabled="!isValid"></Button>
+        <Button text="ОК" @click="confirm" :disabled="!isValid"></Button>
       </div>
     </div>
   </Blackout>
@@ -103,7 +103,7 @@ const isFormFieldsValid = ref<TFormFiledsValidation>({ ...initialFormFieldsNegat
 const formFieldsConfig = ref<TFormFiledConfig[]>([
   {
     field: EOrganizationKeys.ORGANIZATION,
-    placeholder: 'ООО "ЫЫЫ"',
+    placeholder: 'ООО "Организация"',
     label: 'Название:',
     type: EInputType.TEXT,
   },
@@ -115,7 +115,7 @@ const formFieldsConfig = ref<TFormFiledConfig[]>([
   },
   {
     field: EOrganizationKeys.PHONE,
-    placeholder: '+7-800-555-35-35',
+    placeholder: '+7-222-333-54-38',
     label: 'Номер телефона:',
     type: EInputType.PHONE,
   },

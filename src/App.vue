@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <Button :color="EColor.RED" text="Добавить организацию" @click="openModal(null)" />
+    <Button :color="EColor.RED" text="Добавить" @click="openModal(null)" />
     <Input :type="EInputType.SEARCH" placeholder="Найти по ФИО..." v-model="filterInputValue" />
 
     <TableHandbook
